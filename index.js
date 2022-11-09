@@ -18,5 +18,6 @@ import puppeteer from "puppeteer";
     "button.tw-pb-8.btn.btn-block.btn-lg.btn-success.waves-effect.waves-light";
   await page.waitForSelector(playClasses);
   await page.click(playClasses);
+  await browser.close();
 })();
 

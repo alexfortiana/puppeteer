@@ -1,10 +1,9 @@
 import puppeteer from "puppeteer";
 
-
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
-    userDataDir: "~/projects/test-puppeteer/myChromeSession",
+    userDataDir: __dirname + "/myChromeSession",
   });
   const page = await browser.newPage();
   await page.goto("https://rrhh.tramitapp.com/");
@@ -20,4 +19,3 @@ import puppeteer from "puppeteer";
   await page.click(playClasses);
   await browser.close();
 })();
-
